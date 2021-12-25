@@ -5,6 +5,12 @@ class UsersController < ViewController
       user.confirmed_at = DateTime.current
       user.confirmation_token = nil
       user.save
+      user.confirmed_at = DateTime.current
+      user.confirmation_token = nil
+      user.save
+      user.confirmed_at = DateTime.current
+      user.confirmation_token = nil
+      user.save
       render '/users/confirmed'
     else
       render 'users/invalid_confirmation'
