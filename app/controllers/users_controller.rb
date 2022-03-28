@@ -17,6 +17,8 @@ class UsersController < ViewController
       user.password_digest = user.reset_password_digest
       user.reset_password_token = nil
       user.reset_password_digest = nil
+        user.reset_password_token = nil
+      user.reset_password_digest = nil
       user.save
       render '/users/reset_confirmed'
     else
